@@ -10,6 +10,8 @@ from money_tracker.views import logout_user #sesuaikan dengan nama fungsi yang d
 from money_tracker.views import modify_transaction
 from money_tracker.views import delete_transaction
 
+from money_tracker.views import create_transaction_ajax
+
 
 
 app_name = 'money_tracker'
@@ -34,7 +36,9 @@ urlpatterns = [
 
         
     path('delete/<int:id>', delete_transaction, name='delete_transaction'), #sesuaikan dengan nama fungsi yang dibuat
-    
+
+    path('create-ajax/', create_transaction_ajax, name='create_transaction_ajax'),
+
 
 
 

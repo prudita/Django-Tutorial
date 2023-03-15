@@ -2,7 +2,7 @@
 
 {% block content %}
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 <nav class="navbar navbar-expand-lg bg-light">
   
@@ -55,17 +55,9 @@
         <th>Jumlah</th>
         <th>Tanggal</th>
         <th>Deskripsi</th>
+        <th>Aksi</th>
     </tr>
-    {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
-    <table>
-      <tr>
-          <th>Nama</th>
-          <th>Jenis</th>
-          <th>Jumlah</th>
-          <th>Tanggal</th>
-          <th>Deskripsi</th>
-          <th>Aksi</th>
-      </tr>
+
       {% comment %} Tambahkan data di bawah baris ini {% endcomment %}
       {% for transaction in list_of_transactions %}
           <tr>
@@ -80,7 +72,7 @@
                           Ubah
                       </button>
                   </a>
-                </a>
+
                 <a href="{% url 'money_tracker:delete_transaction' transaction.pk %}">
                     <button>
                         Hapus
